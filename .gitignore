@@ -41,6 +41,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+/.pnp
+.pnp.js
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -78,6 +80,9 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+
+# production
+/build
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -122,9 +127,15 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# testing
+/coverage
+
 # yarn v2
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# misc
+.DS_Store
