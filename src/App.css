@@ -1,1 +1,45 @@
+/* CSS Reset */
+/* Dark: #0E1F2B
+Teal: #0DB8B5
+Pink: #BB6BD1
+Blue: #2F5B9C
+ */
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
 
+#root {
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* background */
+.background-container {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(.4)
+}
