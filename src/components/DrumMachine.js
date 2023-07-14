@@ -4,9 +4,12 @@ import DrumPad from './DrumPad';
 
 const DrumMachine = () => {
 
+    // durm pad buttons data
+    
+
     return (
         <div id="drum-machine">
-            {/* <div id="display" className='drum-pad-container'>drumSoundDescription</div> */}
+            <div id="display"></div>
             <div className='drum-pad-container'>
                 {/* map of drum pad buttons */}
 
