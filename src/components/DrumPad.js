@@ -8,7 +8,7 @@ const DrumPad = ({ id, text, audio }) => {
     };
 
     const handleKeyDown = (e) => {
-        if (e.code === `Key${id}`){
+        if (e.code === `Key${id}`) {
             audioRef.current.play();
         }
     };
