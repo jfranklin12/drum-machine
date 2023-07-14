@@ -33,16 +33,20 @@ const DrumMachine = () => {
         setDisplayName(name);
     };
 
-    
+
 
 
     return (
         <div id="drum-machine">
-            <div id="display">{displayName}</div>
-            <div className='drum-pad-container'>
+            {/* control pannel */}
+            <div className='container'>
+                <div id="display" className='btn'><p>{displayName}</p></div>
+            </div>
+            {/* drum pad */}
+            <div className='drum-pad-container container'>
                 {/* map of drum pad buttons */}
                 {drumPadButtons.map(({ id, audio, name }) => (
-                    <DrumPad key={id} id={id} audio={audio} onTrigger={handleDrumPadTrigger} name={name}/>
+                    <DrumPad key={id} id={id} audio={audio} onTrigger={handleDrumPadTrigger} name={name} />
                 ))}
 
             </div>

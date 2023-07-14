@@ -14,10 +14,15 @@ Blue: #00364A, rgb(0, 54, 74)
   align-items: center;
 }
 
+p {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2.3rem;
+}
+
 /* drum machine */
 #drum-machine {
-  width: 40rem;
-  height: 25rem;
+  width: 50rem;
+  height: 30rem;
   background-color: rgb(0, 16, 23);
   border-radius: 0.5rem;
   display: flex;
@@ -26,19 +31,46 @@ Blue: #00364A, rgb(0, 54, 74)
   margin: 0 auto;
 }
 
-/* drum pads */
+.container {
+  margin-inline: auto;
+  color: rgb(197, 70, 176);  
+}
+
+/* drum pad */
 .drum-pad-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
-  justify-items: center;
+}
+
+/* buttons */
+.btn {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .drum-pad {
-  width: 5em;
-  height: 5em;
+  width: 5.5rem;
+  height: 5.5rem;
   background-color: rgb(7, 97, 95);
   border-radius: .5rem;
+  box-shadow: 3px 3px 4px rgba(255, 255, 255, 0.404);
+  transition: background-color 0.2s, transform 0.2s;
 }
+
+.drum-pad.active {
+  background-color: rgb(3, 73, 72);
+  transform: translateY(2px);
+}
+
+/* display */
+#display {
+  width: 13rem;
+  height: 5rem;
+  background-color: rgb(30, 41, 59);
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+
