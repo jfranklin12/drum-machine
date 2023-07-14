@@ -7,7 +7,7 @@ const DrumMachine = () => {
 
     // durm pad buttons data
     const drumPadButtons = [
-        { id: 'heater1', text: 'Q', audio: heater1 }
+        { id: 'Q', text: 'Q', audio: heater1 }
     ]
     
 
