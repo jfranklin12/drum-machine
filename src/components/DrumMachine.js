@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './drumMachine.css';
 import DrumPad from './DrumPad';
 import heater1 from "../assets/audio/heater1.mp3";
@@ -25,16 +25,24 @@ const DrumMachine = () => {
         { id: 'Z', name: `Kick n' Hat`, audio: kickNHat },
         { id: 'X', name: 'Kick', audio: kick },
         { id: 'C', name: 'Closed HH', audio: closedHH }
-    ]
+    ];
+
+    const [displayName, setDisplayName] = useState('');
+
+    const handleDrumPadTrigger = (name) => {
+        setDisplayName(name);
+    };
+
+    
 
 
     return (
         <div id="drum-machine">
-            <div id="display"></div>
+            <div id="display">{displayName}</div>
             <div className='drum-pad-container'>
                 {/* map of drum pad buttons */}
-                {drumPadButtons.map(({ id, audio }) => (
-                    <DrumPad key={id} id={id} text={id} audio={audio} />
+                {drumPadButtons.map(({ id, audio, name }) => (
+                    <DrumPad key={id} id={id} audio={audio} onTrigger={handleDrumPadTrigger} name={name}/>
                 ))}
 
             </div>

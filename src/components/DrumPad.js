@@ -1,15 +1,20 @@
 import React, { useRef, useEffect } from 'react';
 
-const DrumPad = ({ id, text, audio }) => {
+const DrumPad = ({ id, audio, onTrigger, name }) => {
     const audioRef = useRef(null);
 
-    const handleClick = () => {
+    const playAudio = () => {
         audioRef.current.play();
+        onTrigger(name);
+    }
+
+    const handleClick = () => {
+        playAudio();
     };
 
     const handleKeyDown = (e) => {
         if (e.code === `Key${id}`) {
-            audioRef.current.play();
+            playAudio();
         }
     };
 
@@ -22,7 +27,7 @@ const DrumPad = ({ id, text, audio }) => {
 
     return (
         <div className="drum-pad" id={id} onClick={handleClick}>
-            {text}
+            {id}
             <audio className='clip' src={audio} id={id} ref={audioRef}></audio>
 
         </div>
